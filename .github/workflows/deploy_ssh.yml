@@ -17,5 +17,5 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         port: 22
         script: |
-            cd ${{ github.event.repository.name }}/part2/04-cicd
+            cd ${{ github.event.repository.name}}/part2/04-cicd
             sh deploy_ssh.sh
