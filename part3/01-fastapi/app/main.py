@@ -39,6 +39,8 @@ class Order(BaseModel):
         return sum([product.price for product in self.products])
 
     def add_product(self, product: Product):
+        # Product를 인자로 받아서, 해당 id가 존재하는 지 체크 => 없다면 products 필드에 추가 
+        # 업데이트 할 때는 updated_at을 현재 시각으로 업데이트
         if product.id in [existing_product.id for existing_product in self.products]:
             return self
 
